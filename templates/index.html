@@ -1,15 +1,29 @@
 <html>
 <head>
-    <title>NLP - Emotion Detection</title>
+    <title>CodeCraftHub | Your Learning Management Platform</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="./static/mywebscript.js"></script>
     <style>
         .center-heading {
             text-align: center;
         }
+        .btn-primary {
+            background-color: #8B5CF6;
+            border-color: #8B5CF6;
+            border-radius: 8px;
+            padding: 10px 24px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: #6D28D9;
+            border-color: #6D28D9;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+        }
         .btn-success {
-            background-color: #28a745;
-            border-color: #28a745;
+            background-color: #F59E0B;
+            border-color: #F59E0B;
             border-radius: 8px;
             padding: 10px 24px;
             font-weight: 600;
@@ -17,9 +31,9 @@
             transition: background-color 0.2s ease, box-shadow 0.2s ease;
         }
         .btn-success:hover {
-            background-color: #1e7e34;
-            border-color: #1e7e34;
-            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+            background-color: #D97706;
+            border-color: #D97706;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
         }
         .btn-danger {
             background-color: #dc3545;
@@ -49,10 +63,10 @@
 
             <div style="padding: 25px 25px 25px 25px;">
                 <button onclick="RunSentimentAnalysis()" class="btn btn-success">Run Sentiment Analysis</button>
-                <button onclick="clearFields()" class="btn btn-danger" style="margin-left: 10px;">Clear</button>
+                <button onclick="handleDelete()" class="btn btn-danger" style="margin-left: 10px;">Remove</button>
             </div>
             <script>
-                function clearFields() {
+                function handleDelete() {
                     document.getElementById('textToAnalyze').value = '';
                     document.getElementById('system_response').innerHTML = '';
                 }
